@@ -12,4 +12,5 @@ import java.util.List;
 public interface EventRepository extends JpaRepository<Event,Long>, JpaSpecificationExecutor<Event> {
     List<Event> findAll();
     Page<Event> findByTitle(String title, Pageable pageRequest);
+    Page<Event> findByTitleContaining(String title, Pageable pageRequest);
 }
